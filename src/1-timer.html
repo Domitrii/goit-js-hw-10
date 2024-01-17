@@ -32,14 +32,17 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
-    <script src="./js/1-timer.js"></script>
-    <script>
-        flatpickr("#datetime-picker" , {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-    defaultDate: new Date(),
-})
-    </script>
+    <div class="visible-open-block">
+        <svg
+        width="40"
+        height="40"
+        class="modal-icon">
+        <use href="./public/icon.svg#icon-cancel-circle"></use>
+        </svg>
+        <span class="modal-content">Please choose a date in the future</span>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
+    <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>
