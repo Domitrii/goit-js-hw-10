@@ -7,7 +7,10 @@
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/1-timer-8eddac3d.css">
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-992cd48f.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-f90250d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/1-timer-d939a159.css">
   </head>
   <body>
 
@@ -33,14 +36,17 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
-    <script src="./js/1-timer.js"></script>
-    <script>
-        flatpickr("#datetime-picker" , {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-    defaultDate: new Date(),
-})
-    </script>
+    <div class="visible-open-block">
+        <svg
+        width="40"
+        height="40"
+        class="modal-icon">
+        <use href="/goit-js-hw-10/assets/icon-2ed3bb89.svg#icon-cancel-circle"></use>
+        </svg>
+        <span class="modal-content">Please choose a date in the future</span>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
+    
   </body>
 </html>
